@@ -1,0 +1,88 @@
+<div class="example-action-buttons">
+  <button mat-button (click)="accordion.openAll()">Expand All</button>
+  <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your name and age
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input matInput type="number" min="1">
+    </mat-form-field>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel disabled>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Destination
+      </mat-panel-title>
+      <mat-panel-description>
+        Type the country name
+        <mat-icon>map</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Country</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </mat-expansion-panel>
+
+  <!--  <mat-expansion-panel>-->
+  <!--    <mat-expansion-panel-header>-->
+  <!--      <mat-panel-title>-->
+  <!--        Day of the trip-->
+  <!--      </mat-panel-title>-->
+  <!--      <mat-panel-description>-->
+  <!--        Inform the date you wish to travel-->
+  <!--        <mat-icon>date_range</mat-icon>-->
+  <!--      </mat-panel-description>-->
+  <!--    </mat-expansion-panel-header>-->
+
+  <!--    <mat-form-field>-->
+  <!--      <mat-label>Date</mat-label>-->
+  <!--      <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>-->
+  <!--    </mat-form-field>-->
+  <!--    <mat-datepicker #picker></mat-datepicker>-->
+  <!--  </mat-expansion-panel>-->
+</mat-accordion>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter your password</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Amount</mat-label>
+  <input matInput type="number" class="example-right-align">
+  <span matPrefix>$&nbsp;</span>
+  <span matSuffix>.00</span>
+</mat-form-field>
+<mat-list>
+  <mat-list-item>Item 1</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Item 2</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    Item 3
+  </mat-list-item>
+</mat-list>
