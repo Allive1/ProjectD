@@ -1,33 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './modules/angular-material.module';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { MainCardComponent } from './main-card/main-card.component';
-import { DriveIntakeComponent } from './drive-intake/drive-intake.component';
-import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MaterialModule} from "./material/material.module";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent,
-    MainCardComponent,
-    DriveIntakeComponent,
-    ProfileSettingsComponent
+    HomeComponent,
+    ToolbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AngularMaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    MaterialModule
+    // MatToolbarModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
