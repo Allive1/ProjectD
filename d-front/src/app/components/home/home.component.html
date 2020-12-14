@@ -1,0 +1,16 @@
+<!--<ng-container *ngIf="(asyncTabs | async) === null">-->
+<!--  Loading tabs...-->
+<!--</ng-container>-->
+<div class="tab-container">
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Profile">
+    <app-profile></app-profile>
+  </mat-tab>
+  <mat-tab label="Community">
+  Community
+  </mat-tab>
+  <mat-tab label="Settings">
+    Settings
+  </mat-tab>
+</mat-tab-group>
+</div>
