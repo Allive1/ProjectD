@@ -8,10 +8,10 @@
       <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          <mat-card-title>Joe Blow</mat-card-title>
+          <mat-card-subtitle>Certified Scumbag</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+<!--        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
         <mat-card-content>
           <p>
             The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -25,6 +25,38 @@
         </mat-card-actions>
       </mat-card>
       <br>
+    </div>
+    <div *ngIf="tile.text === 'Two'">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>My Garage</mat-card-title>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+<!--          <mat-card-subtitle>Certified Scumbag</mat-card-subtitle>-->
+        </mat-card-header>
+        <mat-card-content>
+<!--          <mat-nav-list>-->
+<!--            <a mat-list-item href="..." *ngFor="let link of links">-->
+<!--              <img mat-card-avatar src="{{link.url}}">{{ link.name }} </a>-->
+<!--          </mat-nav-list>-->
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div *ngIf="tile.text === 'Three'">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Parts Watchlist</mat-card-title>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+          <!--          <mat-card-subtitle>Certified Scumbag</mat-card-subtitle>-->
+        </mat-card-header>
+        <!--        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+        <mat-card-content>
+          <mat-nav-list>
+            <a mat-list-item href="..." *ngFor="let link of links">
+              <img mat-card-avatar src="{{link.url}}">{{ link.name }} </a>
+          </mat-nav-list>
+        </mat-card-content>
+      </mat-card>
     </div>
     <div *ngIf="tile.text !== 'One'">
     {{tile.text}}

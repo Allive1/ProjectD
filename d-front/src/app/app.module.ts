@@ -8,13 +8,17 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MaterialModule} from "./modules/material/material.module";
+import { CommunityComponent } from './components/community/community.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CommunityComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
