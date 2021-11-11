@@ -10,6 +10,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MaterialModule} from "./modules/material/material.module";
 import { CommunityComponent } from './components/community/community.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { InMemoryWebApiModule } from "angular-in-memory-web-api";
+import {DataService} from "./service/data/data.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+//     InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [],
   bootstrap: [AppComponent]

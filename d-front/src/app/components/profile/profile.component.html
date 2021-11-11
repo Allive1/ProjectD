@@ -1,9 +1,5 @@
 <mat-grid-list cols="2" gutterSize="20px" rowHeight="80px" align="center">
-  <mat-grid-tile
-    *ngFor="let tile of tiles"
-    [colspan]="tile.cols"
-    [rowspan]="tile.rows"
-    [style.background]="tile.color">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
     <div *ngIf="tile.text === 'One'">
       <mat-card class="example-card">
         <mat-card-header>
